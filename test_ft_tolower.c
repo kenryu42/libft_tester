@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:16:57 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:19:58 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int		main(int argc, char **argv)
 	}
 	else
 	{
-		printf("st: %c\n", tolower(atoi(argv[1])));
-		printf("ft: %c\n", ft_tolower(atoi(argv[1])));
+		printf("st: %i\n", tolower(atoi(argv[1])));
+		printf("ft: %i\n", ft_tolower(atoi(argv[1])));
 	}
 }
