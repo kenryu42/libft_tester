@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 15:26:10 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/04 16:10:46 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:06:03 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <limits.h>
-
-char	*ft_itoa(int n);
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

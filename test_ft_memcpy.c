@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/05 20:23:16 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:03:18 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
-void	*ft_memcpy(void *dst, const void *src, unsigned long n);
+#include "../includes/libft.h"
 
 void	gen_rand_2string(char *s1, char *s2, unsigned long n)
 {

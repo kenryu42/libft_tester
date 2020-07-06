@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/03 16:04:04 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:04:56 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "time.h"
-#include "stdlib.h"
 #include "string.h"
-
-int		ft_strncmp(const char *s1, const char *s2, unsigned long n);
+#include "../includes/libft.h"
 
 void	gen_rand_2strings(char *s1, char* s2, unsigned long n)
 {

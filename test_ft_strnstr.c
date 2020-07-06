@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 20:08:41 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/02 18:04:48 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:05:07 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
-#include "stdlib.h"
 #include "string.h"
 #include "time.h"
-
-char	*ft_strnstr(const char *str, const char *target, unsigned long n);
+#include "../includes/libft.h"
 
 void	gen_rand_string(char *dst, int n)
 {

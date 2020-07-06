@@ -6,18 +6,16 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/02 15:15:09 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:00:32 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "time.h"
 #include "stdio.h"
 #include "ctype.h"
-#include "stdlib.h"
 #include "string.h"
 #include "limits.h"
-
-int		ft_isalnum(int c);
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

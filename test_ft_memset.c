@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/03 00:12:17 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:04:10 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <time.h>
-
-void	*ft_memset(void *b, int c, unsigned long n);
+#include "../includes/libft.h"
 
 int		check(const char *st, const char *ft)
 {

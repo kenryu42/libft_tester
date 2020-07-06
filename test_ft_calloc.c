@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 21:57:42 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/03 23:47:15 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:06:32 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <time.h>
-
-void	*ft_calloc(unsigned long count, unsigned long size);
+#include <stdio.h>
+#include <string.h>
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

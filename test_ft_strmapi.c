@@ -6,19 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 17:13:48 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/04 17:28:00 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:07:21 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-
-char	*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-
-char	ft_mapchr(unsigned int n, char c)
-{
-
-}
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

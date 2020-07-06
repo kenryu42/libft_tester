@@ -6,15 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 01:33:45 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/04 02:03:40 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:04:28 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-
-char	*ft_substr(const char *s, unsigned int start, size_t len);
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

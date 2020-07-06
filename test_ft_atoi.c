@@ -6,16 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/05 01:20:14 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:05:50 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "time.h"
-#include "stdlib.h"
 #include "string.h"
-
-int		ft_atoi(const char *str);
+#include "../includes/libft.h"
 
 void	gen_rand_int(char *dst)
 {

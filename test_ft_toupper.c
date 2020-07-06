@@ -6,18 +6,16 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/02 15:17:33 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:07:43 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "time.h"
 #include "ctype.h"
-#include "stdlib.h"
 #include "string.h"
 #include "limits.h"
-
-int		ft_toupper(int c);
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

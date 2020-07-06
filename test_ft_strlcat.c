@@ -6,17 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 16:34:22 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/06 05:23:45 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:02:08 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
-#include "stdlib.h"
-#include "unistd.h"
 #include "string.h"
 #include "time.h"
-
-size_t	ft_strlcat(char *dst, const char *src, size_t n);
+#include "../includes/libft.h"
 
 void			gen_rand_2strings(char *dst1, char *dst2, int n)
 {

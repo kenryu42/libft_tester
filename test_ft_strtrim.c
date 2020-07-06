@@ -6,15 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 01:33:45 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/04 03:00:16 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:02:56 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
-
-char	*ft_strtrim(const char *s1, const char *set);
+#include "../includes/libft.h"
 
 int		main(int argc, char **argv)
 {

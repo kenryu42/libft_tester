@@ -6,17 +6,15 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 16:24:55 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/02 22:18:44 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:03:45 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <limits.h>
-
-void	*ft_memchr(const void *s, int c, unsigned long n);
+#include "../includes/libft.h"
 
 void	gen_rand_string(char *dst)
 {
