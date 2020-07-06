@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 02:59:09 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:13:20 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,11 +63,6 @@ int		main(int argc, char **argv)
 		}
 		rate = ((cnt - failed) / (double)cnt) * 100;
 		printf("%.2f%%: Checks: %ld, Failures: %ld\n", rate, cnt, failed);
-	}
-	else if (strlen(argv[1]) == 1)
-	{
-		printf("st: %i\n", isdigit((argv[1][0])));
-		printf("ft: %i\n", ft_isdigit((argv[1][0])));
 	}
 	else
 	{
