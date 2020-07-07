@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:15:29 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 16:56:49 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int		main(int argc, char **argv)
 		printf("-----------------------\n");
         printf("usage [auto]:\n1. a --run\n2. a --run --print\n");
         printf("usage [manual]:\n1. a <int c>\n");
+		printf("2. a --C <char c>\n");
         return (42);
     }
 	else if (!strcmp(argv[1], "--run"))
@@ -63,6 +64,11 @@ int		main(int argc, char **argv)
 		rate = ((cnt - failed) / (double)cnt) * 100;
 		printf("%.2f%%: Checks: %ld, Failures: %ld\n", rate, cnt, failed);
 	}
+	else if (!strcmp(argv[1], "--C"))
+    {
+        printf("st: %i\n", isalnum(argv[2][0]));
+        printf("ft: %i\n", ft_isalnum(argv[2][0]));
+    }
 	else
 	{
 		printf("st: %i\n", isalnum(atoi(argv[1])));
