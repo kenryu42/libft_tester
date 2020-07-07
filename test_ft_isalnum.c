@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:00:20 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/08 01:55:08 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		main(int argc, char **argv)
 				printf("FAILED case: %c , st: %d, ft: %d\n", i, isalnum(i), ft_isalnum(i));
 			}
 			if (argc == 3 && !strcmp(argv[2], "--print"))
-				printf("%ld: test case: %c , st: %d, ft: %d\n", cnt, i, isalnum(i), ft_isalnum(i));
+				printf("%i: test case: %c , st: %d, ft: %d\n", i, i, isalnum(i), ft_isalnum(i));
 		}
 		double rate = ((cnt - failed) / (double)cnt) * 100;
 		printf("%.2f%%: Checks: %ld, Failures: %ld\n", rate, cnt, failed);

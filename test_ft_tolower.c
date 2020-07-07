@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:01:18 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/08 01:58:46 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,10 +41,10 @@ int		main(int argc, char **argv)
 			if (tolower(i) != ft_tolower(i))
 			{
 				failed++;
-				printf("FAILED case: %c , st: %d, ft: %d\n", i, tolower(i), ft_tolower(i));
+				printf("FAILED case: %c , st: %c, ft: %c\n", i, tolower(i), ft_tolower(i));
 			}
 			if (argc == 3 && !strcmp(argv[2], "--print"))
-				printf("%ld: test case: %c , st: %d, ft: %d\n", cnt, (char)i, tolower(i), ft_tolower(i));
+				printf("%i: test case: %c , st: %c, ft: %c\n", i, (char)i, tolower(i), ft_tolower(i));
 		}
 		double rate = ((cnt - failed) / (double)cnt) * 100;
 		printf("%.2f%%: Checks: %ld, Failures: %ld\n", rate, cnt, failed);
