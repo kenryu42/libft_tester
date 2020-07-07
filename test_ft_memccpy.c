@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 01:01:43 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:03:31 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 04:17:41 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,35 +86,36 @@ int		main(int argc, char **argv)
 	}
 	else
 	{
-		/*char dst1[101];*/
-		/*char dst2[101];*/
-		/*memset(dst1, 48, sizeof(dst1));*/
-		/*memset(dst2, 48, sizeof(dst2));*/
-		/*dst1[100] = '\0';*/
-		/*dst2[100] = '\0';*/
-		/*char *src = argv[1];	*/
-		/*char c = argv[2][0];*/
-		/*int	n = atoi(argv[3]);*/
-		char buff1[] = "abcdefghijklmnopqrstuvwxyz";
-		char buff2[] = "abcdefghijklmnopqrstuvwxyz";
-		char *src = "string with\200inside !";
+		char dst1[101];
+		char dst2[101];
+		memset(dst1, 48, sizeof(dst1));
+		memset(dst2, 48, sizeof(dst2));
+		dst1[100] = '\0';
+		dst2[100] = '\0';
+		char *src = strdup(argv[1]);	
+		char c = argv[2][0];
+		int	n = atoi(argv[3]);
+		/*char buff1[] = "abcdefghijklmnopqrstuvwxyz";*/
+		/*char buff2[] = "abcdefghijklmnopqrstuvwxyz";*/
+		/*char *src = "string with\200inside !";*/
 
-		char *st_res = memccpy(buff1, src, 0600, 21);
-		char *ft_res = ft_memccpy(buff2, src, 0600, 21);
+		char *st = memccpy(dst1, src, c, n);
+		char *ft = ft_memccpy(dst2, src, c, n);
 		
-		printf("st_ret: %s\n", st_res);
+		printf("st_ret: %s\n", st);
 		printf("st_dst: ");
-		for (int i = 0; i < 26; i++)
+		for (int i = 0; i < 100; i++)
 		{
-			printf("%c", buff1[i]);
+			printf("%c", dst1[i]);
 		}
 		printf("\n");
-		printf("ft_ret: %s\n", ft_res);
+		printf("ft_ret: %s\n", ft);
 		printf("ft_dst: ");
-		for (int i = 0; i < 26; i++)
+		for (int i = 0; i < 100; i++)
 		{
-			printf("%c", buff2[i]);
+			printf("%c", dst2[i]);
 		}
 		printf("\n");
+		free(src);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:04:01 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 03:57:13 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,8 +117,8 @@ int		main(int argc, char **argv)
 			char *src = argv[1];
 			int n = atoi(argv[2]);
 
-			memset(dst1, 48, sizeof(dst1));
-			memset(dst2, 48, sizeof(dst2));
+			memset(dst1, '0', sizeof(dst1));
+			memset(dst2, '0', sizeof(dst2));
 			memmove(dst1, src, n);
 			ft_memmove(dst2, src, n);
             printf("st: ");
