@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:47:23 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 14:22:27 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 14:28:40 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int		main(int argc, char **argv)
 		int		fd;
 
 		c = argv[1][0];
-		printf("c: %c\n", c);
-		fd = open("file", O_WRONLY | O_CREAT | S_IRUSR | S_IWUSR);
+		fd = open("42", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 		if (fd == -1)
 			printf("open failed\n");
 		ft_putchar_fd(c, fd);
