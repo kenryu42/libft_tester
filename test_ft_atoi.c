@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:04:55 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/08 02:20:47 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,8 @@ int		main(int argc, char **argv)
 	}	
 	else
 	{
-		/*char	*str = argv[1];*/
-		char *str = "\t\v\f\r\n \f-06050";
+		char	*str = argv[1];
+		/*char *str = "\t\v\f\r\n \f-06050";*/
 
 		printf("st: %d\n", atoi(str));
 		printf("ft: %d\n", ft_atoi(str));
