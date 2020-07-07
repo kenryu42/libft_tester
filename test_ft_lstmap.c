@@ -6,13 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 16:34:02 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 22:54:44 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	*func(void *content)
 {
@@ -56,6 +56,7 @@ int		main(int argc, char **argv)
 		new_list = ft_lstmap(list, func, free);
 		print_list(list);
 		print_list(new_list);
+		print_list(list);
 		ft_lstclear(&list, free);
 		ft_lstclear(&new_list, free);
 	}

@@ -6,13 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/06 21:59:22 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 22:58:38 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	print_list(t_list *list)
 {
@@ -43,7 +43,7 @@ int		main(int argc, char **argv)
 		list = NULL;
 		i = 2;
 		while (i < argc)
-			ft_lstadd_back(&list, ft_lstnew(argv[i++]));
+			ft_lstadd_back(&list, ft_lstnew(strdup(argv[i++])));
 		print_list(list);
 		ft_lstclear(&list, free);
 	}

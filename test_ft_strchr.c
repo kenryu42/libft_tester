@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 15:18:35 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:05:22 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:02:06 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "time.h"
 #include "string.h"
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	gen_rand_string(char *dst)
 {
@@ -57,10 +57,10 @@ int		main(int argc, char **argv)
 			if (st != ft)
 			{
 				failed++;
-				printf("FAILED CASE:\nstr: %s | c: %c\nst: %s\nft: %s\n", str, c, st, ft);
+				printf("FAILED CASE:\nstr: %s\nc: %c\nst: %s\nft: %s\n", str, c, st, ft);
 			}
 			if (print)
-				printf("[%d] test case:\nstr: %s | c: %c\nst: %s\nft: %s\n", i + 1, str, c, st, ft);
+				printf("[%d] test case:\nstr: %s\nc: %c\nst: %s\nft: %s\n", i + 1, str, c, st, ft);
 		}
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%.2f%%: Checks: %d, Failures: %d\n", rate, test_cases, failed);

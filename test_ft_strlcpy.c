@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 16:34:22 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:02:30 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:01:29 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	gen_rand_2strings(char *dst1, char *dst2, int n)
 {
@@ -34,6 +34,13 @@ void	gen_rand_string(char *dst, int n)
 	*dst = '\0';
 }
 
+void	print_dst(char *dst)
+{
+	for (int i = 0; i < 100; i++)
+		printf("%c", dst[i]);
+	printf("\n");
+}
+
 int		main(int argc, char **argv)
 {
 	srand(time(0));
@@ -44,14 +51,14 @@ int		main(int argc, char **argv)
 		printf(" size_t ft_strlcpy(char *dst, const char *src, size_t n)\n");
 		printf("-----------------------------------------------------------------------\n");
         printf("usage [auto]:\n1. a --run\n2. a --run <test_cases>\n3. a --run <test_cases> --print\n");
-        printf("usage [manual]:\n1. a <string src> <int n>\n");
+        printf("usage [manual]:\n1. a <string dst> <string src> <int n>\n");
         return (42);
     }
 	else if (!strcmp(argv[1], "--run"))
 	{
-		char	src[101];
-		char	dst1[201];
-		char	dst2[201];
+		char	src[50];
+		char	dst1[101];
+		char	dst2[101];
 		int		print = 0;
 		char	cpy_dst[101];
 		unsigned long	failed = 0;
@@ -64,10 +71,9 @@ int		main(int argc, char **argv)
 		printf("Running test(s): ft_strlcpy\n");
 		for (unsigned long i = 0; i < test_cases; i++)
 		{
-			int n = rand() % 201;
-			int dn = rand() % 101;
-			int sn = rand() % 101;
-			gen_rand_2strings(dst1, dst2, dn);
+			int n = rand() % 100;
+			int sn = rand() % 50;
+			gen_rand_2strings(dst1, dst2, 100);
 			gen_rand_string(src, sn);
 			strcpy(cpy_dst, dst1);
 			unsigned long st = strlcpy(dst1, src, n);
@@ -76,26 +82,44 @@ int		main(int argc, char **argv)
 			if (st != ft || strcmp(dst1, dst2))
 			{
 				failed++;
-				printf("FAILED case:\nsrc: %s\ndst: %s\nn: %d\nst: %lu | %s\nft: %lu | %s\n", src, cpy_dst, n, st, dst1, ft, dst2);
+				printf("FAILED case:\nsrc: %s\ndst: %s\nn: %d\nst: %lu | ", src, cpy_dst, n, st);
+				print_dst(dst1);
+				printf("ft: %lu | ", ft);
+				print_dst(dst2);
 			}
 			if (print)
-				printf("[%lu] test case:\nsrc: %s\ndst: %s\nn: %d\nst: %lu | %s\nft: %lu | %s\n", i + 1, src, cpy_dst, n, st, dst1, ft, dst2);
+			{
+				printf("[%lu] test case:\nsrc: %s\ndst: %s\nn: %d\nst: %lu | ", i + 1, src, cpy_dst, n, st);
+				print_dst(dst1);
+				printf("ft: %lu | ", ft);
+				print_dst(dst2);
+			}
 		}
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%2.f%%: Checks: %lu, Failures: %lu\n", rate, test_cases, failed);
 	}
 	else
 	{
-		char *src = argv[1];
+		char *dst;
+		char *src;
 		char dst1[100];
-		/*char dst2[100];*/
-		memset(dst1, 0, sizeof(dst1));
-		/*memset(dst2, 0, sizeof(dst2));*/
+		char dst2[100];
+		int  n;
 
-		printf("ft: %lu\n", ft_strlcpy(dst1, src, (sizeof(dst1))));
+		dst = argv[1];
+		src = argv[2];
+		n = atoi(argv[3]);
+		memset(dst1, 'x', sizeof(dst1));
+		memset(dst2, 'x', sizeof(dst2));
+		strcpy(dst1, dst);
+		strcpy(dst2, dst);
+		printf("st: %lu\n", strlcpy(dst1, src, n));
 		for (int i = 0; i < 100; i++)
-			printf("%i", dst1[i]);
+			printf("%c", dst1[i]);
 		printf("\n");
-		/*printf("ft: %lu | %s\n", ft_strlcpy(dst2, src, atoi(argv[2])), dst2);*/
+		printf("ft: %lu\n", ft_strlcpy(dst2, src, n));
+		for (int i = 0; i < 100; i++)
+			printf("%c", dst2[i]);
+		printf("\n");
 	}
 }

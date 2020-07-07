@@ -6,13 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/06 22:28:42 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:07:35 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	print_list(t_list *list)
 {

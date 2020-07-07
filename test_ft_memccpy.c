@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 01:01:43 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 04:17:41 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:03:55 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <time.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	gen_rand_string(char *dst, unsigned int n)
 {
@@ -29,6 +29,13 @@ int		check(const char *st, const char *ft)
 	if (st && ft)
 		return (2); // need strcmp check
 	return (1); // fail
+}
+
+void	print_i(char *d)
+{
+	for (int i = 0; i < 100; i++)
+		printf("%c", d[i]);
+	printf("\n");
 }
 
 int		main(int argc, char **argv)
@@ -53,6 +60,8 @@ int		main(int argc, char **argv)
 		int print = 0;
 		char dst1[101];
 		char dst2[101];
+		/*char *dst1 = malloc(sizeof(char) * 101);*/
+		/*char *dst2 = malloc(sizeof(char) * 101);*/
 		unsigned long failed = 0;
 		unsigned long test_cases = 1000000;
 
@@ -64,8 +73,8 @@ int		main(int argc, char **argv)
 		for (unsigned long i = 0; i < test_cases; i++)
 		{
 			gen_rand_string(src, rand() % 51);
-			memset(dst1, 48, sizeof(dst1));
-			memset(dst2, 48, sizeof(dst2));
+			memset(dst1, 48, 101);
+			memset(dst2, 48, 101);
 			dst1[100] = '\0';
 			dst2[100] = '\0';
 			int c = rand() % 95 + 32;
@@ -73,16 +82,28 @@ int		main(int argc, char **argv)
 			char *st = memccpy(dst1, src, c, n);
 			char *ft = memccpy(dst2, src, c, n);
 
-			if ((check(st, ft) == 1) || (strcmp(dst1, dst2)) || ((check(st, ft) == 2) && strcmp(st, ft)))
+			if ((check(st, ft) == 1) || (memcmp(dst1, dst2, 101)) || ((check(st, ft) == 2) && strcmp(st, ft)))
 			{
 				failed++;
 				printf("FAILED case:\nsrc: %s\nc: %c, n: %d\nst_ptr: %s\nst_dst: %s\nft_ptr: %s\nft_dst: %s\n", src, c, n, st, dst1, ft, dst2);
 			}
 			if (print)
-				printf("[%lu] test case:\nsrc: %s\nc: %c, n: %d\nst_ptr: %s\nst_dst: %s\nft_ptr: %s\nft_dst: %s\n", i + 1, src, c, n, st, dst1, ft, dst2);
+			{
+				printf("[%lu] test case:\nsrc: %s\nc: %c, n: %d\n", i + 1, src, c, n);
+				printf("st_ptr: %s\n", st);
+				/*printf("st_dst: %s\n", dst1);*/
+				printf("st_dst: ");
+				print_i(dst1);
+				printf("ft_ptr: %s\n", ft);
+				printf("ft_dst: ");
+				print_i(dst2);
+				/*printf("ft_dst: %s\n", dst2);*/
+			}
 		}
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%.2f%%: Checks: %lu, Failures: %lu\n", rate, test_cases, failed);
+		/*free(dst1);*/
+		/*free(dst2);*/
 	}
 	else
 	{

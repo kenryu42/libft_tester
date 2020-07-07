@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 16:24:55 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:03:45 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:04:05 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include <time.h>
 #include <limits.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	gen_rand_string(char *dst)
 {
@@ -40,9 +40,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("--------------------------------------------------------\n");
-		printf(" void *ft_memchr(const void *s, int c, unsigned long n)\n");
-		printf("--------------------------------------------------------\n");
+		printf("-------------------------------------------------\n");
+		printf(" void *ft_memchr(const void *s, int c, size_t n)\n");
+		printf("-------------------------------------------------\n");
 		printf("usage [auto]:\n");
 		printf("1. a --run\n");
 		printf("2. a --run <test_cases>\n");
@@ -88,6 +88,7 @@ int		main(int argc, char **argv)
 		char *s = argv[1];
 		int c = argv[2][0];
 		int n = atoi(argv[3]);
+		s = strdup(s);
 		/*int s[] = {48, 2, 3, 4, 5, 6, 7, 8, 9};*/
 		/*int c = argv[1][0];*/
 		/*int n = atoi(argv[2]);*/
@@ -97,5 +98,6 @@ int		main(int argc, char **argv)
 
 		printf("st: %s\n", st_res);
 		printf("ft: %s\n", ft_res);
+		free(s);
 	}
 }

@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:04:56 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:03:11 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "time.h"
 #include "string.h"
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	gen_rand_2strings(char *s1, char* s2, unsigned long n)
 {
@@ -33,9 +33,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
     {
-        printf("--------------------------------------------------------------\n");
-		printf(" int strncmp(const char *s1, const char *s2, unsigned long n)\n");
-        printf("--------------------------------------------------------------\n");
+        printf("-------------------------------------------------------\n");
+		printf(" int strncmp(const char *s1, const char *s2, size_t n)\n");
+        printf("-------------------------------------------------------\n");
         printf("usage [auto]:\n1. a --run\n2. a --run <test_cases>\n3. a --run <test_cases> --print\n");
         printf("usage [manual]:\n1. a <string s1> <string s2> <int n>\n");
         return (42);

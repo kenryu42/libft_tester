@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 17:00:43 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:01:02 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "ctype.h"
 #include "string.h"
 #include "limits.h"
-#include "../includes/libft.h"
+#include "../libft.h"
 
 int		main(int argc, char **argv)
 {

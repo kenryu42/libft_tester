@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 16:23:43 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:01:49 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:02:18 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include <string.h>
 #include <time.h>
 
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void	gen_rand_string(char *str, unsigned long n)
 {

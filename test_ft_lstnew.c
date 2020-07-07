@@ -6,13 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/06 20:23:53 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 22:52:06 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
-#include "../includes/libft.h"
+#include "../libft.h"
 
 int		main(int argc, char **argv)
 {
@@ -37,5 +37,4 @@ int		main(int argc, char **argv)
 	printf("list->content: %s\n", list->content);
 	printf("list->next: %s\n", (char *)list->next);
 	ft_lstdelone(list, free);
-	printf("free: success\n");
 }

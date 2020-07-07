@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 16:34:22 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 03:02:08 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 23:01:38 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "stdio.h"
 #include "string.h"
 #include "time.h"
-#include "../includes/libft.h"
+#include "../libft.h"
 
 void			gen_rand_2strings(char *dst1, char *dst2, int n)
 {
@@ -40,11 +40,11 @@ int				main(int argc, char **argv)
 
 	if (argc == 1)
     {
-		printf("-----------------------------------------------------------------------\n");
-		printf(" unsigned long ft_strlcat(char *dst, const char *src, unsigned long n)\n");
-		printf("-----------------------------------------------------------------------\n");
+		printf("---------------------------------------------------------\n");
+		printf(" size_t ft_strlcat(char *dst, const char *src, size_t n)\n");
+		printf("---------------------------------------------------------\n");
         printf("usage [auto]:\n1. a --run\n2. a --run <test_cases>\n3. a --run <test_cases> --print\n");
-        printf("usage [manual]:\n1. a <string src> <int n>\n");
+        printf("usage [manual]:\n1. a <string dst> <string src> <int n>\n");
         return (42);
     }
 	else if (!strcmp(argv[1], "--run"))
@@ -86,16 +86,20 @@ int				main(int argc, char **argv)
 	}
 	else
 	{
-		char *dst = malloc(sizeof(char) * 15);
-		memset(dst, 0, 15);
-		memset(dst, 'r', 6);
-		dst[11] = 'a';
-		int ft = strlcat(dst, "lorem", 15);
-		printf("ft: %d\n", ft);
-		write(1, dst, 15);
-		free(dst);
+		int n;
+		char *src;
+		char *dst;
 
-		/*printf("st: %lu | %s\n", strlcat(dst1, src, atoi(argv[4])), dst1);*/
-		/*printf("ft: %lu | %s\n", ft_strlcat(dst2, src, atoi(argv[3])), dst2);*/
+		dst = argv[1];
+		src = argv[2];
+		n = atoi(argv[3]);
+		char dst1[100];
+		char dst2[100];
+		memset(dst1, 0, sizeof(dst1));
+		memset(dst2, 0, sizeof(dst2));
+		strcpy(dst1, dst);
+		strcpy(dst2, dst);
+		printf("st: %lu | %s\n", strlcat(dst1, src, n), dst1);
+		printf("ft: %lu | %s\n", ft_strlcat(dst2, src, n), dst2);
 	}
 }
