@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test_ft_putchar_fd.c                               :+:      :+:    :+:   */
+/*   test_ft_putstr_fd.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:47:23 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 14:30:37 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/07 14:34:45 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,21 @@ int		main(int argc, char **argv)
 	if (argc == 1)
 	{
 		printf("------------------------------------\n");
-		printf(" void ft_putchar_fd(char c, int fd)\n");
+		printf(" void ft_putstr_fd(char *s, int fd)\n");
 		printf("------------------------------------\n");
 		printf("usage [manual]:\n");
-		printf("1. a <char c>\n");
+		printf("1. a <string s>\n");
 	}
 	else
 	{
-		char	c;
+		char	*s;
 		int		fd;
 
-		c = argv[1][0];
+		s = argv[1];
 		fd = open("42", O_WRONLY | O_CREAT, S_IRUSR | S_IWUSR);
 		if (fd == -1)
 			printf("open failed\n");
-		ft_putchar_fd(c, fd);
+		ft_putstr_fd(s, fd);
 		if (close(fd) == -1)
 			printf("close failed\n");
 	}
