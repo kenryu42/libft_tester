@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 22:54:04 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 05:57:15 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,5 @@ int		main(int argc, char **argv)
 		printf("after: ");
 		print_list(list);
 		ft_lstclear(&list, free);
-		while (1);
 	}
 }
