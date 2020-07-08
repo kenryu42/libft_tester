@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 15:26:10 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:05:05 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/08 16:12:38 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int		main(int argc, char **argv)
 		int n = atoi(argv[1]);
 		char *s = ft_itoa(n);
 
-		printf("%s\n", s);
+		printf("ft: %s\n", s);
 		free(s);
 	}
 }
