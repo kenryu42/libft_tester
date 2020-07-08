@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:09:18 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/08 19:20:32 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,9 +40,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("--------------------------------------------------------------\n");
-		printf(" void *ft_memmove(void *dst. const void *src, unsigned long n)\n");
-		printf("--------------------------------------------------------------\n");
+		printf("--------------------------------------------------------\n");
+		printf(" void *ft_memmove(void *dst. const void *src, size_t n)\n");
+		printf("--------------------------------------------------------\n");
 		printf("usage [auto]:\n");
         printf("1. a --run\n");
         printf("2. a --run <test_cases>\n");
@@ -94,20 +94,25 @@ int		main(int argc, char **argv)
             char dst3[] = "ABCDEF";
             int n = 6;
 
+			printf("--------------------------------------------------------\n");
+			printf(" void *ft_memmove(void *dst. const void *src, size_t n)\n");
+			printf("--------------------------------------------------------\n");
+			printf("str: %s\n", dst1);
             memmove(dst1 + 1, dst1, n);
             ft_memmove(dst2 + 1, dst2, n);
             ft_memcpy(dst3 + 1, dst3, n);
-            printf("ft_memcpy: ");
-            for (int i = 0; i < n; i ++)
-                printf("%c", dst3[i]);
-            printf("\n");
+            printf("ft_memmove(str + 1, str, 6)\n");
             printf("st: ");
-            for (int i = 0; i < n; i ++)
+            for (int i = 0; i < 6; i ++)
                 printf("%c", dst1[i]);
             printf("\n");
             printf("ft: ");
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < 6; i++)
                 printf("%c", dst2[i]);
+            printf("\n");
+			printf("ft_memcpy: ");
+            for (int i = 0; i < 6; i ++)
+                printf("%c", dst3[i]);
             printf("\n");
         }
 		else

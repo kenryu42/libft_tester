@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 22:53:27 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/08 18:15:48 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,20 +37,20 @@ int		main(int argc, char **argv)
 		printf(" void ft_lstclear(t_list **lst, void (*del)(void *))\n");
 		printf("-----------------------------------------------------\n");
 		printf("usage [manual]:\n");
-		printf("1. a --free\n");
+		printf("1. a --free <. . .>\n");
 		return (42);
 	}
 	else if (!strcmp(argv[1], "--free"))
 	{
-		i = 1;
+		i = 2;
 		list = NULL;
-		while (i <= 10)
-			ft_lstadd_back(&list, ft_lstnew(ft_itoa(i++)));
+		while (i < argc)
+			ft_lstadd_back(&list, ft_lstnew(strdup(argv[i++])));
 		printf("before: ");
 		print_list(list);
 		ft_lstclear(&list, free);
+		printf("ft_lstclear(&list, free);\n");
 		printf("after: ");
 		print_list(list);
-		printf("list clear: success\n");
 	}
 }
