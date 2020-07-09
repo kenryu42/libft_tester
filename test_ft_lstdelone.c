@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 22:52:43 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 21:16:54 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int		main(int argc, char **argv)
 	else if (!strcmp(argv[1], "--free"))
 	{
 		list = ft_lstnew(strdup("hello i m data."));
-		printf("before list->content: %s\n", list->content);
+		/*printf("before: list->content: %s\n", list->content);*/
 		ft_lstdelone(list, free);
-		printf("after list->content: %s\n", list->content);
+		/*printf("after: list->content: %s\n", list->content);*/
 	}
 }

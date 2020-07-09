@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:06:36 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 20:16:10 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,9 +68,9 @@ int				main(int argc, char **argv)
 	}
 	else
 	{
-		char	*str = NULL;
+		char	*str = argv[1];
 
-		/*printf("st: %lu\n", strlen(str));*/
+		printf("st: %lu\n", strlen(str));
 		printf("ft: %lu\n", ft_strlen(str));
 	}
 }

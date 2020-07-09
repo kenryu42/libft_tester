@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/08 18:15:48 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 21:09:29 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,11 +46,9 @@ int		main(int argc, char **argv)
 		list = NULL;
 		while (i < argc)
 			ft_lstadd_back(&list, ft_lstnew(strdup(argv[i++])));
-		printf("before: ");
+		printf("list: ");
 		print_list(list);
 		ft_lstclear(&list, free);
-		printf("ft_lstclear(&list, free);\n");
-		printf("after: ");
-		print_list(list);
+		printf("\nft_lstclear(&list, free);\n");
 	}
 }

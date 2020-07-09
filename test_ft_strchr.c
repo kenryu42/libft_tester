@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 15:18:35 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:02:06 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 18:40:18 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,8 @@ int		main(int argc, char **argv)
 		printf(" char *ft_strchr(const char *str, int c)\n");
 		printf("-----------------------------------------\n");
         printf("usage [auto]:\n1. a --run\n2. a --run <test_cases>\n3. a --run <test_cases> --print\n");
-        printf("usage [manual]:\n1. a <string str> <char c>\n");
+        printf("usage [manual]:\n1. a --C <string str> <char c>\n");
+		printf("2. a <string str> <int c>\n");
         return (42);
     }
 	else if (argc >= 2 && !strcmp(argv[1], "--run"))
@@ -65,12 +66,20 @@ int		main(int argc, char **argv)
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%.2f%%: Checks: %d, Failures: %d\n", rate, test_cases, failed);
 	}
+	else if (!strcmp(argv[1], "--C"))
+	{
+		char *str = argv[2];
+		int c = argv[3][0];
+		
+		printf("st: %s\n", strchr(str, c));
+		printf("ft: %s\n", ft_strchr(str, c));
+	}
 	else
 	{
 		char *str = argv[1];
-		int n = argv[2][0];
+		int c = atoi(argv[2]);
 		
-		printf("st: %s\n", strchr(str, n));
-		printf("ft: %s\n", ft_strchr(str, n));
+		printf("st: %s\n", strchr(str, c));
+		printf("ft: %s\n", ft_strchr(str, c));
 	}
 }
