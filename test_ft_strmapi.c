@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 17:13:48 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 18:46:15 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 23:14:32 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../libft.h"
+#include "libft.h"
 
 char	cmap(unsigned int i, char c)
 {

@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 21:57:42 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:03:29 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 23:17:23 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <time.h>
 #include <stdio.h>
 #include <string.h>
-#include "../libft.h"
+#include "libft.h"
 
 int		main(int argc, char **argv)
 {

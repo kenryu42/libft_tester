@@ -6,16 +6,16 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 13:43:15 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/08 01:55:08 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 23:11:44 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "time.h"
-#include "stdio.h"
-#include "ctype.h"
-#include "string.h"
-#include "limits.h"
-#include "../libft.h"
+#include <time.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <limits.h>
+#include "libft.h"
 
 int		main(int argc, char **argv)
 {

@@ -6,13 +6,13 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/07 13:47:23 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:06:10 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 23:20:55 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <fcntl.h>
-#include "../libft.h"
+#include "libft.h"
 
 int		main(int argc, char **argv)
 {

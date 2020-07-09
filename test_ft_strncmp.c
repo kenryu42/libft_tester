@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/07 23:03:11 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 23:15:53 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "stdio.h"
-#include "time.h"
-#include "string.h"
-#include "../libft.h"
+#include <stdio.h>
+#include <time.h>
+#include <string.h>
+#include "libft.h"
 
 void	gen_rand_2strings(char *s1, char* s2, unsigned long n)
 {

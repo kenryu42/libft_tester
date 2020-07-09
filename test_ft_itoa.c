@@ -6,14 +6,14 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 15:26:10 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/08 16:12:38 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/09 23:21:54 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <string.h>
 #include <limits.h>
-#include "../libft.h"
+#include "libft.h"
 
 int		main(int argc, char **argv)
 {
