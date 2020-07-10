@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 16:34:22 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:16:54 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 23:22:44 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,8 +109,8 @@ int		main(int argc, char **argv)
 		dst = argv[1];
 		src = argv[2];
 		n = atoi(argv[3]);
-		memset(dst1, 'x', sizeof(dst1));
-		memset(dst2, 'x', sizeof(dst2));
+		memset(dst1, '0', sizeof(dst1));
+		memset(dst2, '0', sizeof(dst2));
 		strcpy(dst1, dst);
 		strcpy(dst2, dst);
 		printf("st: %lu\n", strlcpy(dst1, src, n));

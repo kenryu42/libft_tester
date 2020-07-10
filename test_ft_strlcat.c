@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 16:34:22 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:16:43 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 23:22:08 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,8 @@ int				main(int argc, char **argv)
 			gen_rand_2strings(dst1, dst2, dn);
 			gen_rand_string(src, sn);
 			strcpy(cpy_dst, dst1);
-			unsigned long st = strlcat(dst1, src, n);
-			unsigned long ft = ft_strlcat(dst2, src, n);
+			size_t st = strlcat(dst1, src, n);
+			size_t ft = ft_strlcat(dst2, src, n);
 
 			if (st != ft || strcmp(dst1, dst2))
 			{

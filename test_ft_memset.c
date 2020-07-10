@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/10 20:37:51 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 23:20:06 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("--------------------------------------------------\n");
-		printf(" void *ft_memset(void *b, int c, unsigned long n)\n");
-		printf("--------------------------------------------------\n");
+		printf("-------------------------------------------\n");
+		printf(" void *ft_memset(void *b, int c, size_t n)\n");
+		printf("-------------------------------------------\n");
 		printf("usage [auto]:\n");
         printf("1. a --run\n");
         printf("2. a --run <test_cases>\n");
