@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 01:33:45 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:16:21 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 18:32:29 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,32 @@ int		main(int argc, char **argv)
 		printf("--------------------------------------------------\n");
 		printf(" char *ft_strjoin(const char *s1, const char *s2)\n");
 		printf("--------------------------------------------------\n");
+		printf("usage [auto]\n");
+		printf("1. a --run\n");
 		printf("usage [manual]:\n");
 		printf("1. a <string s1> <string s2>\n");
+	}
+	else if(!strcmp(argv[1], "--run"))
+	{
+		printf("--------------------------------------------------\n");
+		printf(" char *ft_strjoin(const char *s1, const char *s2)\n");
+		printf("--------------------------------------------------\n");
+		printf("1. ft_strjoin(NULL, NULL)\n");
+		char *s = ft_strjoin(NULL, NULL);
+		printf("ft: %s\n", s);
+		free(s);
+		printf("2. ft_strjoin(\"\", \"\")\n");
+		s = ft_strjoin("", "");
+		printf("ft: %s\n", s);
+		free(s);
+		printf("3. ft_strjoin(\"\", \"42\")\n");
+		s = ft_strjoin("", "42");
+		printf("ft: %s\n", s);
+		free(s);
+		printf("4. ft_strjoin(\"42\", \"Tokyo\")\n");
+		s = ft_strjoin("42", "Tokyo");
+		printf("ft: %s\n", s);
+		free(s);
 	}
 	else
 	{

@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:17:41 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 21:28:18 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,21 @@ int		main(int argc, char **argv)
 		}
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%.2f%%: Checks: %lu, Failures: %lu\n", rate, test_cases, failed);
+	}
+	else if (!strcmp(argv[1], "--runs"))
+	{
+		char dst1[100];
+		char dst2[100];
+		memset(dst1, 0, sizeof(dst1));
+		memset(dst2, 0, sizeof(dst2));
+		printf("-------------------------------------------------------\n");
+		printf(" void *ft_memcpy(void *dst. const void *src, size_t n)\n");
+		printf("-------------------------------------------------------\n");
+		printf("1. ft_memcpy(NULL, NULL, 5)\n");
+		char *st = memcpy(NULL, NULL, 5);
+		char *ft = ft_memcpy(NULL, NULL, 5);
+		printf("st: %s\n", st);
+		printf("ft: %s\n", ft);
 	}
 	else
 	{

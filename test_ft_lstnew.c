@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:19:10 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 19:05:35 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,5 @@ int		main(int argc, char **argv)
 	printf("list->content: %s\n", list->content);
 	printf("list->next: %s\n", (char *)list->next);
 	ft_lstdelone(list, free);
+	printf("freed\n");
 }

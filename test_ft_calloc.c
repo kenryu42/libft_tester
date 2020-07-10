@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 21:57:42 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:17:23 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 19:10:43 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("----------------------------------------------------------\n");
-		printf(" void *ft_calloc(unsigned long count, unsigned long size)\n");
-		printf("----------------------------------------------------------\n");
+		printf("--------------------------------------------\n");
+		printf(" void *ft_calloc(size_t count, size_t size)\n");
+		printf("--------------------------------------------\n");
 		printf("usage [auto]:\n");
 		printf("1. a --run\n");
 		printf("1. a --run <test_cases>\n");

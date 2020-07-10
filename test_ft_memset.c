@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:17:33 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 20:37:51 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 #include <string.h>
 #include <time.h>
 #include "libft.h"
-
-int		check(const char *st, const char *ft)
-{
-	for (int i = 0; i < 100; i++)
-		if(st[i] != ft[i])
-			return (1);
-	return (0);
-}
 
 void	print_dst(const char *dst)
 {
@@ -68,7 +60,7 @@ int		main(int argc, char **argv)
 
 			char *st = memset(dst1, c, n);
 			char *ft = ft_memset(dst2, c, n);
-			if (check(st, ft))
+			if (memcmp(st, ft, 100))
 			{
 				failed++;
 				printf("FAILED case:\nc: %i, n: %i\nst: ", c, n);

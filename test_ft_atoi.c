@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:21:44 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 20:12:06 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ int		main(int argc, char **argv)
 		printf(" int ft_atoi(const char *str)\n");
 		printf("------------------------------\n");
         printf("usage [auto]:\n1. a --run\n2. a --run <test_cases>\n3. a --run <test_cases> --print\n");
+		printf("4. a --runs\n");
         printf("usage [manual]:\n1. a <string>\n");
         return (42);
     }
@@ -74,7 +75,38 @@ int		main(int argc, char **argv)
 		}
 		double rate = ((test_cases - failed) / (double) test_cases) * 100;
 		printf("%.2f%%: Checks: %d, Failures: %d\n", rate, test_cases, failed);
-	}	
+	}
+	else if (!strcmp(argv[1], "--runs"))
+	{
+		printf("------------------------------\n");
+		printf(" int ft_atoi(const char *str)\n");
+		printf("------------------------------\n");
+		printf("1. ft_atoi(\"-2147483648\")\n");
+		int st = atoi("-2147483648");
+		int ft = ft_atoi("-2147483648");
+		printf("st: %i\n", st);
+		printf("ft: %i\n", ft);
+		printf("2. ft_atoi(\"2147483647\")\n");
+		st = atoi("2147483647");
+		ft = ft_atoi("-2147483647");
+		printf("st: %i\n", st);
+		printf("ft: %i\n", ft);
+		printf("3. ft_atoi(\"0\")\n");
+		st = atoi("0");
+		ft = ft_atoi("0");
+		printf("st: %i\n", st);
+		printf("ft: %i\n", ft);
+		printf("4. ft_atoi(\"      +100\")\n");
+		st = atoi("       +100");
+		ft = ft_atoi("      +100");
+		printf("st: %i\n", st);
+		printf("ft: %i\n", ft);
+		printf("5. ft_atoi(\"\\t\\v\\f\\r\\b\\n \\f-06050\")\n");
+		st = atoi("\t\v\f\r\n \f-06050");
+		ft = ft_atoi("\t\v\f\r\n \f-06050");
+		printf("st: %i\n", st);
+		printf("ft: %i\n", ft);
+	}
 	else
 	{
 		char	*str = argv[1];

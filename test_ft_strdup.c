@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 16:23:43 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:16:11 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 19:04:59 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,6 @@ int		main(int argc, char **argv)
 		printf("ft: %s\n", ft);
 		free(st);
 		free(ft);
+		printf("freed\n");
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/03 13:35:18 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:24:32 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 19:23:02 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,9 +34,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("----------------------------------------------------------------\n");
-		printf(" int ft_memcmp(const void* s1, const void *s2, unsigned long n)\n");
-		printf("----------------------------------------------------------------\n");
+		printf("---------------------------------------------------------\n");
+		printf(" int ft_memcmp(const void* s1, const void *s2, size_t n)\n");
+		printf("---------------------------------------------------------\n");
 		printf("usage [auto]:\n");
 		printf("1. a --run\n");
 		printf("2. a --run <test_cases>\n");

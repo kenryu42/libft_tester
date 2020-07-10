@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 15:26:10 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:21:54 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 19:04:22 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,9 @@ int		main(int argc, char **argv)
 	else if (!strcmp(argv[1], "--run"))
 	{
 		int cases[] = {INT_MIN, INT_MAX, 0};
-		printf(" Running corner case test(s): ft_itoa\n");
-		printf("--------------------------------------\n");
+		printf("----------------------\n");
+		printf(" char *ft_itoa(int n)\n");
+		printf("----------------------\n");
 		for (int i = 0; i < 3; i++)
 		{
 			char *ft = ft_itoa(cases[i]);
@@ -46,5 +47,6 @@ int		main(int argc, char **argv)
 
 		printf("ft: %s\n", s);
 		free(s);
+		printf("freed\n");
 	}
 }

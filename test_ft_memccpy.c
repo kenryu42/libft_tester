@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 01:01:43 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:17:51 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 19:11:15 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ int		main(int argc, char **argv)
 
 	if (argc == 1)
 	{
-		printf("----------------------------------------------------------------------\n");
-		printf(" void *ft_memccpy(void *dst, const void *src, int c, unsigned long n)\n");
-		printf("----------------------------------------------------------------------\n");
+		printf("---------------------------------------------------------------\n");
+		printf(" void *ft_memccpy(void *dst, const void *src, int c, size_t n)\n");
+		printf("---------------------------------------------------------------\n");
 		printf("usage [auto]:\n");
 		printf("1. a --run\n");
 		printf("2. a --run <test_cases>\n");

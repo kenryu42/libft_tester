@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/02 16:24:55 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:18:03 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 20:21:20 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		main(int argc, char **argv)
 		printf("1. a --run\n");
 		printf("2. a --run <test_cases>\n");
 		printf("3. a --run <test_cases> --print\n");
+		printf("4. a --runs\n");
 		printf("usage [manual]:\n");
 		printf("1. a <string src> <int c> <int n>\n");
 		return (42);
@@ -83,21 +84,29 @@ int		main(int argc, char **argv)
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%.2f%%: Checks: %lu, Failures: %lu\n", rate, test_cases, failed);
 	}
+	else if (!strcmp(argv[1], "--runs"))
+	{
+		printf("-------------------------------------------------\n");
+		printf(" void *ft_memchr(const void *s, int c, size_t n)\n");
+		printf("-------------------------------------------------\n");
+		printf("1. ft_memchr(\"abc\\0def\", 'e', 10)\n");
+		char *st = memchr("abc\0def", 'e', 10);
+		char *ft = memchr("abc\0def", 'e', 10);
+		printf("st: %s\n", st);
+		printf("ft: %s\n", ft);
+	}
 	else
 	{
 		char *s = argv[1];
 		int c = argv[2][0];
 		int n = atoi(argv[3]);
-		s = strdup(s);
-		/*int s[] = {48, 2, 3, 4, 5, 6, 7, 8, 9};*/
-		/*int c = argv[1][0];*/
-		/*int n = atoi(argv[2]);*/
+		/*s = strdup(s);*/
 		
 		char *st_res = memchr(s, c, n);
 		char *ft_res = ft_memchr(s, c, n);
 
 		printf("st: %s\n", st_res);
 		printf("ft: %s\n", ft_res);
-		free(s);
+		/*free(s);*/
 	}
 }
