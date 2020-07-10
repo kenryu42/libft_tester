@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/10 21:28:18 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 22:22:20 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int		main(int argc, char **argv)
         printf("1. a --run\n");
         printf("2. a --run <test_cases>\n");
         printf("3. a --run <test_cases> --print\n");
+		printf("4. a --run\n");
 		printf("usage [manual]:\n");
 		printf("1. a <string src> <int n>\n");
 		printf("2. a --overlap\n");
