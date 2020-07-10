@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/01 21:44:17 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:18:47 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/10 23:01:20 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		main(int argc, char **argv)
         printf("1. a --run\n");
         printf("2. a --run <test_cases>\n");
         printf("3. a --run <test_cases> --print\n");
+		printf("4. a --runs\n");
 		printf("usage [manual]:\n");
 		printf("1. a <string src> <int n>\n");
 		printf("2. a --overlap\n");
@@ -84,6 +85,17 @@ int		main(int argc, char **argv)
 		}
 		double rate = ((test_cases - failed) / (double)test_cases) * 100;
 		printf("%.2f%%: Checks: %lu, Failures: %lu\n", rate, test_cases, failed);
+	}
+	else if (!strcmp(argv[1], "--runs"))
+	{
+		printf("--------------------------------------------------------\n");
+		printf(" void *ft_memmove(void *dst. const void *src, size_t n)\n");
+		printf("--------------------------------------------------------\n");
+		printf("1. ft_memmove(NULL, NULL, 5)\n");
+		char *st = memmove(NULL, NULL, 5);
+		char *ft = ft_memmove(NULL, NULL, 5);
+		printf("st: %s\n", st);
+		printf("ft: %s\n", ft);
 	}
 	else
 	{
