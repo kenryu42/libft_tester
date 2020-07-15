@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/06 19:46:33 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/09 23:19:24 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/14 22:09:07 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,8 @@ int		main(int argc, char **argv)
 		printf("list: ");
 		print_list(list);
 		ft_lstclear(&list, free);
-		printf("\nft_lstclear(&list, free);\n");
+		printf("\nft_lstclear(&list, free);\n\n");
+		printf("list: ");
+		print_list(list);
 	}
 }
