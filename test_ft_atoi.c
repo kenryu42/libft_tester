@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/30 21:24:57 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/10 20:12:06 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/17 10:23:19 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,7 +88,7 @@ int		main(int argc, char **argv)
 		printf("ft: %i\n", ft);
 		printf("2. ft_atoi(\"2147483647\")\n");
 		st = atoi("2147483647");
-		ft = ft_atoi("-2147483647");
+		ft = ft_atoi("2147483647");
 		printf("st: %i\n", st);
 		printf("ft: %i\n", ft);
 		printf("3. ft_atoi(\"0\")\n");
@@ -110,7 +110,6 @@ int		main(int argc, char **argv)
 	else
 	{
 		char	*str = argv[1];
-		/*char *str = "\t\v\f\r\n \f-06050";*/
 
 		printf("st: %d\n", atoi(str));
 		printf("ft: %d\n", ft_atoi(str));
