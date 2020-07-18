@@ -6,7 +6,7 @@
 /*   By: jliew <jliew@student.42tokyo.jp>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/04 05:16:40 by jliew             #+#    #+#             */
-/*   Updated: 2020/07/15 20:54:27 by jliew            ###   ########.fr       */
+/*   Updated: 2020/07/17 17:32:07 by jliew            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,17 @@ void	print_split(char **split)
 	}
 	if (!*split)
 	{
-		printf("[[%s]]\n", *split);
+		printf("[%s]\n", *split);
 		free(split);
 		return ;
 	}
 	printf("[");
 	for (i = 0; split[i]; i++)
 	{
-		printf(" [%s] ", split[i]);
+		printf("\"%s\", ", split[i]);
 		free(split[i]);
 	}
-	printf("[%s] ", split[i]);
+	printf("%s", split[i]);
 	printf("]\n");
 	free(split[i]);
 	free(split);
